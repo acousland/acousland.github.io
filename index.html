@@ -4,84 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f3ec">
-  <meta name="description" content="Independent Mac apps by Aaron Cousland. Explore Mondrian, Screener, co-written, Marginal, and Agora.">
+  <meta name="description" content="Independent Mac apps by Aaron Cousland. Explore Mondrian, Screener, co-written, Marginal, Agora, and BoxerScope.">
   <meta property="og:title" content="Aaron Cousland — Independent software">
-  <meta property="og:description" content="Tools for diagrams, desktops, writing, and the people you work with.">
+  <meta property="og:description" content="Tools for diagrams, desktops, writing, relationships, and the road ahead.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://acousland.github.io/">
   <meta property="og:image" content="https://acousland.github.io/assets/social.png">
   <meta name="twitter:card" content="summary_large_image">
   <title>Aaron Cousland — Independent software</title>
+  <link rel="canonical" href="https://acousland.github.io/">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <style>
-    :root { color-scheme: light; --paper:#f5f3ec; --ink:#24382e; --muted:#617067; --line:#d9ddd2; --accent:#315f48; }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; background:var(--paper); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; -webkit-font-smoothing:antialiased; }
-    a { color:inherit; text-decoration:none; }
-    a:focus-visible { outline:3px solid #497855; outline-offset:5px; border-radius:3px; }
-    .skip-link { position:fixed; top:10px; left:10px; transform:translateY(-150%); background:var(--ink); color:white; padding:12px; z-index:10; }
-    .skip-link:focus { transform:translateY(0); }
-    .wrap { width:min(1120px,calc(100% - 80px)); margin:auto; }
-    header { display:flex; align-items:center; justify-content:space-between; padding:30px 0; border-bottom:1px solid var(--line); gap:20px; }
-    .identity { display:flex; align-items:center; gap:11px; font-size:15px; font-weight:600; letter-spacing:-.2px; }
-    .mark { display:grid; place-items:center; width:32px; height:32px; background:var(--ink); color:var(--paper); border-radius:50%; font-family:Georgia,serif; font-size:17px; font-weight:400; }
-    .profile { font-size:13px; display:flex; gap:8px; align-items:center; }
-    .profile:hover, .source:hover { color:var(--accent); text-decoration:underline; text-underline-offset:4px; }
-    .intro { padding:76px 0 64px; position:relative; }
-    .eyebrow { margin:0 0 22px; display:flex; gap:9px; align-items:center; font-size:11px; letter-spacing:2px; text-transform:uppercase; font-weight:600; }
-    .dot { width:6px; height:6px; border-radius:50%; background:#608266; }
-    h1 { font-family:Georgia,"Times New Roman",serif; font-size:clamp(46px,6.3vw,76px); line-height:1.08; font-weight:400; letter-spacing:-3px; margin:0 0 24px; }
-    h1 em { font-weight:400; color:#63836b; }
-    .intro-copy { font-size:17px; line-height:1.65; color:var(--muted); max-width:490px; margin:0; }
-    .collection { display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--line); padding:18px 0 24px; font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:1.6px; }
-    .collection span:last-child { font-weight:400; color:var(--muted); letter-spacing:.5px; text-transform:none; font-size:12px; }
-    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; }
-    .card { display:flex; flex-direction:column; overflow:hidden; border:1px solid var(--line); border-radius:12px; background:#fffefa; }
-    .media { position:relative; height:300px; overflow:hidden; display:flex; align-items:center; justify-content:center; border-bottom:1px solid var(--line); padding:24px; }
-    .media img.screenshot { display:block; width:100%; height:100%; object-fit:contain; filter:drop-shadow(0 8px 10px #29332a18); border-radius:5px; }
-    .mondrian .media { background:#e9ede3; }
-    .cowritten .media { background:#ece8df; }
-    .marginal .media { background:#e4e9eb; }
-    .card-body { padding:25px 27px 26px; display:flex; flex-direction:column; flex:1; }
-    .card-heading { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:12px; margin-bottom:13px; }
-    h2 { font-family:Georgia,"Times New Roman",serif; font-size:29px; line-height:1.2; font-weight:400; letter-spacing:-.6px; margin:0; }
-    .tag { flex-shrink:0; font-size:10px; color:var(--muted); border:1px solid var(--line); padding:5px 8px; border-radius:5px; letter-spacing:.3px; }
-    .description { font-size:14px; color:var(--muted); line-height:1.65; margin:0 0 25px; }
-    .card-footer { display:flex; flex-wrap:wrap; gap:14px 18px; align-items:center; justify-content:space-between; margin-top:auto; }
-    .button { display:inline-flex; gap:12px; align-items:center; border:1px solid var(--ink); color:var(--ink); padding:10px 14px; border-radius:6px; font-size:12px; font-weight:600; transition:background .15s,color .15s; }
-    .button:hover { background:var(--ink); color:var(--paper); }
-    .source { color:var(--muted); font-size:12px; }
-    .screener .media { background:#e0e8ec; }
-    .devices { width:350px; max-width:94%; position:relative; height:218px; }
-    .monitor { width:84%; height:164px; margin:0 auto; padding:7px; background:#24343e; border-radius:9px; box-shadow:0 12px 20px #20384318; }
-    .display { width:100%; height:100%; overflow:hidden; border-radius:4px; background:linear-gradient(150deg,#94bfcb,#397382 58%,#23464c); position:relative; }
-    .display::before { content:""; position:absolute; width:250px; height:230px; border-radius:50%; background:#b6d5c355; top:55px; left:-90px; }
-    .display::after { content:""; position:absolute; width:260px; height:190px; border-radius:50%; background:#d6e7d644; top:100px; right:-80px; }
-    .stand { width:43px; height:28px; background:#80939c; margin:0 auto; }
-    .stand::after { content:""; display:block; width:94px; height:7px; background:#80939c; border-radius:6px; position:relative; top:24px; left:-25px; }
-    .laptop { position:absolute; bottom:0; right:-6px; width:175px; height:110px; border:5px solid #3e505b; border-bottom-width:8px; border-radius:6px; box-shadow:0 8px 20px #20384326; }
-    .laptop::after { content:""; position:absolute; height:6px; left:-15px; right:-15px; bottom:-13px; background:#a3b2bb; border-radius:1px 1px 8px 8px; }
-    .app-icon { position:absolute; width:66px; height:66px; left:calc(50% - 33px); top:calc(50% - 33px); z-index:1; }
-    .laptop .app-icon { width:37px; height:37px; left:calc(50% - 18px); top:calc(50% - 18px); }
-    .art-label { position:absolute; bottom:12px; left:18px; color:#576a73; font-size:9px; letter-spacing:1px; text-transform:uppercase; }
-    .agora { grid-column:1 / -1; display:grid; grid-template-columns:1fr 1fr; }
-    .agora .media { height:100%; min-height:246px; background:#e9e4d9; border-bottom:0; border-right:1px solid var(--line); }
-    .agora .card-body { justify-content:center; padding:36px; }
-    .agora .card-footer { margin-top:0; }
-    .agora-art { width:280px; height:172px; position:relative; display:grid; place-items:center; }
-    .orbit { position:absolute; width:155px; height:155px; border:1px solid #a79e894d; border-radius:50%; }
-    .orbit:nth-child(1) { left:20px; }
-    .orbit:nth-child(2) { right:20px; }
-    .agora-letter { z-index:1; font:76px Georgia,serif; color:#7d7562; }
-    .development { font-size:12px; color:var(--muted); display:flex; gap:8px; align-items:center; }
-    footer { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:30px 0 36px; margin-top:52px; border-top:1px solid var(--line); font-size:12px; color:var(--muted); }
-    footer a { text-underline-offset:4px; }
-    footer a:hover { text-decoration:underline; }
-    @media(min-width:1000px) { .intro::after { content:"AC / 01"; position:absolute; right:0; top:92px; color:#a5afa2; font:12px ui-monospace,monospace; letter-spacing:2px; writing-mode:vertical-rl; } }
-    @media(max-width:700px) { .wrap { width:calc(100% - 36px); } header { padding:22px 0; } .intro { padding:49px 0 44px; } h1 { letter-spacing:-2px; } .intro-copy { font-size:15px; } .grid { grid-template-columns:1fr; gap:20px; } .media { height:275px; padding:20px; } .agora { grid-column:auto; display:flex; } .agora .media { min-height:220px; border-right:0; border-bottom:1px solid var(--line); } .agora .card-body { padding:25px 27px 26px; } footer { align-items:flex-start; flex-direction:column; gap:12px; margin-top:36px; } }
-    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .button { transition:none; } }
-  </style>
+  <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
   <a class="skip-link" href="#apps">Skip to apps</a>
@@ -94,53 +27,55 @@
       <section class="intro" aria-labelledby="intro-title">
         <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Independent software</p>
         <h1 id="intro-title">Small apps.<br><em>Room to do more.</em></h1>
-        <p class="intro-copy">Tools for diagrams, desktops, writing, and the people you work with. Made by Aaron Cousland.</p>
+        <p class="intro-copy">Tools for diagrams, desktops, writing, relationships, and the road ahead. Made by Aaron Cousland.</p>
       </section>
       <section id="apps" aria-label="Apps">
-        <div class="collection"><span>The collection</span><span>Five apps · Made for Mac</span></div>
+        <div class="collection"><span>The collection</span><span>Six apps · Made for Mac</span></div>
         <div class="grid">
           <article class="card mondrian">
-            <div class="media"><img class="screenshot" src="assets/mondrian.webp" alt="Mondrian displaying a cloud platform diagram in its native Mac editor." width="1440" height="960" fetchpriority="high"></div>
+            <a class="media" href="/mondrian/" aria-label="Explore Mondrian"><img class="screenshot" src="/assets/mondrian.webp" alt="Mondrian displaying a cloud platform diagram in its native Mac editor." width="1440" height="960" fetchpriority="high"></a>
             <div class="card-body">
-              <div class="card-heading"><h2>Mondrian</h2><span class="tag">Diagrams</span></div>
+              <div class="card-heading"><h2><a href="/mondrian/">Mondrian</a></h2><span class="tag">Diagrams</span></div>
               <p class="description">Turn structured ideas into diagrams with a native Mac editor and local AI integration.</p>
-              <div class="card-footer"><a class="button" href="https://github.com/acousland/Mondrian-releases/releases/latest" aria-label="Download Mondrian for Mac">Download for Mac <span aria-hidden="true">↗</span></a><a class="source" href="https://github.com/acousland/Mondrian-releases">Release notes ↗</a></div>
+              <div class="card-footer"><a class="button" href="/mondrian/">Explore Mondrian <span aria-hidden="true">→</span></a><a class="source" href="https://github.com/acousland/Mondrian-releases/releases/latest">Download for Mac ↗</a></div>
             </div>
           </article>
           <article class="card screener">
-            <div class="media" role="img" aria-label="Illustration of Screener connecting a Mac desktop and laptop.">
-              <div class="devices" aria-hidden="true"><div class="monitor"><div class="display"><img class="app-icon" src="assets/screener-icon.webp" alt="" width="66" height="66"></div></div><div class="stand"></div><div class="laptop"><div class="display"><img class="app-icon" src="assets/screener-icon.webp" alt="" width="37" height="37"></div></div></div>
+            <a class="media" href="/screener/" aria-label="Explore Screener: remote desktop for Mac.">
+              <div class="devices" aria-hidden="true"><div class="monitor"><div class="display"><img class="app-icon" src="/assets/screener-icon.webp" alt="" width="66" height="66"></div></div><div class="stand"></div><div class="laptop"><div class="display"><img class="app-icon" src="/assets/screener-icon.webp" alt="" width="37" height="37"></div></div></div>
               <span class="art-label" aria-hidden="true">App illustration</span>
-            </div>
+            </a>
             <div class="card-body">
-              <div class="card-heading"><h2>Screener</h2><span class="tag">Remote desktop</span></div>
+              <div class="card-heading"><h2><a href="/screener/">Screener</a></h2><span class="tag">Remote desktop</span></div>
               <p class="description">Bring your Mac mini’s desktop to your MacBook, with up to 4K streaming and headless displays.</p>
-              <div class="card-footer"><a class="button" href="https://github.com/acousland/Screener/releases" aria-label="Download Screener preview releases for Mac">Download preview <span aria-hidden="true">↗</span></a><a class="source" href="https://github.com/acousland/Screener">About the app ↗</a></div>
+              <div class="card-footer"><a class="button" href="/screener/">Explore Screener <span aria-hidden="true">→</span></a><a class="source" href="https://github.com/acousland/Screener/releases">Download preview ↗</a></div>
             </div>
           </article>
           <article class="card cowritten">
-            <div class="media"><img class="screenshot" src="assets/co-written.webp" alt="Co-written showing an example passage alongside readability, voice, and sentence rhythm analysis." width="1440" height="1140" loading="lazy"></div>
+            <a class="media" href="/co-written/" aria-label="Explore co-written"><img class="screenshot" src="/assets/co-written.webp" alt="Co-written showing an example passage alongside readability, voice, and sentence rhythm analysis." width="1440" height="1140" loading="lazy"></a>
             <div class="card-body">
-              <div class="card-heading"><h2>co-written</h2><span class="tag">Writing companion</span></div>
+              <div class="card-heading"><h2><a href="/co-written/">co-written</a></h2><span class="tag">Writing companion</span></div>
               <p class="description">Understand the voice, readability, and rhythm of your writing, right from your Mac’s menu bar.</p>
-              <div class="card-footer"><a class="button" href="https://github.com/acousland/co-written/releases/latest" aria-label="Download co-written for Mac">Download for Mac <span aria-hidden="true">↗</span></a><a class="source" href="https://github.com/acousland/co-written">About the app ↗</a></div>
+              <div class="card-footer"><a class="button" href="/co-written/">Explore co-written <span aria-hidden="true">→</span></a><a class="source" href="https://github.com/acousland/co-written/releases/latest">Download for Mac ↗</a></div>
             </div>
           </article>
           <article class="card marginal">
-            <div class="media"><img class="screenshot" src="assets/marginal.webp" alt="Marginal editing a rendered Markdown document with headings, a list, and a code block." width="1339" height="1140" loading="lazy"></div>
+            <a class="media" href="/marginal/" aria-label="Explore Marginal"><img class="screenshot" src="/assets/marginal.webp" alt="Marginal editing a rendered Markdown document with headings, a list, and a code block." width="1339" height="1140" loading="lazy"></a>
             <div class="card-body">
-              <div class="card-heading"><h2>Marginal</h2><span class="tag">Markdown editor</span></div>
+              <div class="card-heading"><h2><a href="/marginal/">Marginal</a></h2><span class="tag">Markdown editor</span></div>
               <p class="description">Open Markdown, edit the rendered page, and save. A little room for your words.</p>
-              <div class="card-footer"><a class="button" href="https://github.com/acousland/marginal/releases/latest" aria-label="Download Marginal for Mac">Download for Mac <span aria-hidden="true">↗</span></a><a class="source" href="https://github.com/acousland/marginal">About the app ↗</a></div>
+              <div class="card-footer"><a class="button" href="/marginal/">Explore Marginal <span aria-hidden="true">→</span></a><a class="source" href="https://github.com/acousland/marginal/releases/latest">Download for Mac ↗</a></div>
             </div>
           </article>
           <article class="card agora">
-            <div class="media" role="img" aria-label="Agora artwork: overlapping circles representing connections."><div class="agora-art" aria-hidden="true"><div class="orbit"></div><div class="orbit"></div><span class="agora-letter">a</span></div></div>
-            <div class="card-body">
-              <div class="card-heading"><h2>Agora</h2><span class="tag">Coming soon</span></div>
-              <p class="description">Keep track of your people, conversations, and the promises that connect them.</p>
-              <div class="card-footer"><span class="development"><span class="dot" aria-hidden="true"></span>In development</span></div>
-            </div>
+            <a class="media" href="/agora/" aria-label="Explore Agora"><img class="screenshot" src="/assets/agora.webp" alt="Agora’s overview showing sample people, commitments due today, overdue promises, and recent conversations." width="1600" height="1030" loading="lazy"></a>
+            <div class="card-body"><div class="card-heading"><h2><a href="/agora/">Agora</a></h2><span class="tag">Personal CRM</span></div>
+              <p class="description">Keep track of your people, conversations, and the promises that connect them.</p><div class="card-footer"><a class="button" href="/agora/">Explore Agora <span aria-hidden="true">→</span></a><a class="source" href="https://github.com/acousland/Agora/releases/latest">Download for Mac ↗</a></div></div>
+          </article>
+          <article class="card boxerscope">
+            <a class="media" href="/boxerscope/" aria-label="Explore BoxerScope"><img class="brand-art" src="/assets/boxerscope-icon.webp" alt="BoxerScope app icon with a boxer engine and blue diagnostic pulse." width="512" height="512" loading="lazy"></a>
+            <div class="card-body"><div class="card-heading"><h2><a href="/boxerscope/">BoxerScope</a></h2><span class="tag">Motorcycle diagnostics</span></div>
+              <p class="description">Explore your BMW boxer’s fault memories, live data, and diagnostic history with UniCarScan.</p><div class="card-footer"><a class="button" href="/boxerscope/">Explore BoxerScope <span aria-hidden="true">→</span></a><a class="source" href="https://github.com/acousland/BoxerScope-releases/releases/latest">Download for Mac ↗</a></div></div>
           </article>
         </div>
       </section>
